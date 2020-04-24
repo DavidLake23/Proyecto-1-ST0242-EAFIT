@@ -47,6 +47,12 @@ public class Principal {
 			
 			else if(vNumero == 2) {
 				
+				if(Vehiculo.cantidadVehiculos() == 0) {
+					
+					System.out.println("Arreglo vacío");
+					continue;
+				}
+				
 				System.out.println(Vehiculo.toStringVehiculos());
 				continue;
 			}
@@ -58,6 +64,12 @@ public class Principal {
 			}
 			
 			else if(vNumero == 4) {
+				
+				if(Vehiculo.cantidadVehiculos() == 0) {
+					
+					System.out.println("Arreglo vacío");
+					continue;
+				}
 				
 				System.out.println(Vehiculo.toStringVehiculosVerdes());
 				continue;
@@ -82,11 +94,17 @@ public class Principal {
 			
 			else if(vNumero == 6) {
 				
+				if(Sensor.cantidadSensores() == 0) {
+					
+					System.out.println("Arreglo vacío");
+					continue;
+				}
+				
 				System.out.println(Sensor.toStringSensores());
 				continue;
 			}
 			
-			else if(vNumero == 7) {
+			else if(vNumero == 7) {  
 				
 				System.out.println("Cantidad de sensores actual: " + Sensor.cantidadSensores());
 				continue;
@@ -94,11 +112,23 @@ public class Principal {
 			
 			else if(vNumero == 8) {
 				
+				if(Sensor.cantidadSensores() == 0) {
+					
+					System.out.println("Arreglo vacío");
+					continue;
+				}
+				
 				System.out.println(Sensor.toStringSensoresTemperatura());
 				continue;
 			}
 			
 			else if(vNumero == 666) {
+				
+				if(Sensor.cantidadSensores() == 0) {
+					
+					System.out.println("Arreglo vacío");
+					continue;
+				}
 				
 				Sensor[] vSensores = Sensor.sensoresOrdenadosTemperatura();
 				

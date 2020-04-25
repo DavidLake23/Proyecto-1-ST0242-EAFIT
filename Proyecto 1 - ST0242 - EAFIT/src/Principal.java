@@ -7,6 +7,7 @@ public class Principal {
 		mostrarMenu();
 	}
 	
+	@SuppressWarnings("unused")
 	public static void mostrarMenu() {
 		
 		Scanner S = new Scanner(System.in);

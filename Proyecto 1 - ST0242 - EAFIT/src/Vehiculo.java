@@ -19,8 +19,8 @@ public class Vehiculo {
 		
 		this(mo, ma, va, "verde");
 		
-	    vehiculos[posAnadir] = this;
-		posAnadir++;
+	//    vehiculos[posAnadir] = this;
+	//	  posAnadir++;
 	}
 	
 	public Vehiculo(int mo, String ma, double va, String co) {

@@ -58,7 +58,7 @@ public class Vehiculo {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < vehiculos.length; i++) {
+		for(int i = 0; i < cantidadVehiculos(); i++) {
 			
 			if(vehiculos[i].getColor().equalsIgnoreCase("verde")) {
 				

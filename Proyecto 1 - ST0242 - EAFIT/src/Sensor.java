@@ -31,7 +31,7 @@ public class Sensor {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < sensores.length; i++) {
+		for(int i = 0; i < cantidadSensores(); i++) {
 			
 			resultado = resultado.concat("Sensor en posición #" + i + ": " + sensores[i].toString() + "\n");
 		}

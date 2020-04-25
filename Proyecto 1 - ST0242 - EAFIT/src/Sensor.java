@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Sensor {
 	
 	public static Sensor[] sensores = new Sensor[8];
@@ -45,7 +43,7 @@ public class Sensor {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < sensores.length; i++) {
+		for(int i = 0; i < cantidadSensores(); i++) {
 			
 			if(sensores[i].getTipo().equalsIgnoreCase("temperatura")) {
 				

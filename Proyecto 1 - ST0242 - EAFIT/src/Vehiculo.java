@@ -39,14 +39,14 @@ public class Vehiculo {
 	
 	public String toString() {
 		
-		return String.valueOf(this.modelo).concat(" " + this.marca).concat(String.valueOf(" " + this.valorComercial)).concat(" " + this.color);
+		return String.valueOf(modelo).concat(" " + marca).concat(String.valueOf(" " + valorComercial)).concat(" " + color);
 	}
 	
 	public static String toStringVehiculos() {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < vehiculos.length; i++) {
+		for(int i = 0; i < cantidadVehiculos(); i++) {
 			
 			resultado = resultado.concat("Vehículo en posición #" + i + ": " + vehiculos[i].toString() + "\n");
 		}

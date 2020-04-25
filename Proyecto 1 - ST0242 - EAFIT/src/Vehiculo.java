@@ -17,10 +17,7 @@ public class Vehiculo {
 	
 	public Vehiculo(int mo, String ma, double va) {
 		
-		modelo = mo;
-		marca = ma;
-		valorComercial = va;
-		color = "verde";
+		this(mo, ma, va, "verde");
 		
 	    vehiculos[posAnadir] = this;
 		posAnadir++;

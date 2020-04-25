@@ -135,7 +135,7 @@ public class Principal {
 				
 				for(int i = 0; i < vSensores.length; i++) {
 					
-					System.out.println("Posición #" + i + ":" + vSensores[i].getValor());
+					System.out.println("Posición #" + i + ":" + vSensores[i].toString());
 				}
 				
 				continue;

@@ -9,31 +9,42 @@ public class Sensor {
 	
 	public Sensor() {
 		
-		sensores[posAnadir] = this;
-		posAnadir++;
+		Sensor.sensores[posAnadir] = this;
+		Sensor.posAnadir++;
 	}
 	
 	public Sensor(String t, double v) {
 		
-		tipo = t;
-		valor = v;
+		this.tipo = t;
+		this.valor = v;
 		
-		sensores[posAnadir] = this;
-		posAnadir++;
+		Sensor.sensores[posAnadir] = this;
+		Sensor.posAnadir++;
 	}
 	
 	public String toString() {
 		
-		return "(" + getTipo() + " , " + getValor() + ")";
+		return "(" + this.getTipo() + " , " + this.getValor() + ")";
 	}
 	
-	public static String toStringSensores() {
+	public static String toStringSensores(String tipo) {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < cantidadSensores(); i++) {
+		if(tipo != null) {
 			
-			resultado = resultado.concat("Sensor en posición #" + i + ": " + sensores[i].toString() + "\n");
+			for(int i = 0; i < Sensor.cantidadSensores(); i++) {
+				
+				if(sensores[i].getTipo().equalsIgnoreCase(tipo)) {
+					
+					resultado = resultado.concat("Sensor en posición #" + i + ": " + Sensor.sensores[i].toString() + "\n");
+				}
+			}
+		}
+		
+		else for(int i = 0; i < cantidadSensores(); i++) {
+			
+			resultado = resultado.concat("Sensor en posición #" + i + ": " + Sensor.sensores[i].toString() + "\n");
 		}
 		
 		return resultado;
@@ -41,17 +52,7 @@ public class Sensor {
 	
 	public static String toStringSensoresTemperatura() {
 		
-		String resultado = "";
-		
-		for(int i = 0; i < cantidadSensores(); i++) {
-			
-			if(sensores[i].getTipo().equalsIgnoreCase("temperatura")) {
-				
-				resultado = resultado.concat("Sensor en posición #" + i + ": " + sensores[i].toString() + "\n");
-			}
-		}
-		
-		return resultado;
+		return Sensor.toStringSensores("temperatura");
 	}
 	
 	
@@ -100,30 +101,30 @@ public class Sensor {
 	
 	public static int cantidadSensores() {
 		
-		return posAnadir;
+		return Sensor.posAnadir;
 	}
 	
 	//Getters
 	
 	public String getTipo() {
 		
-		return tipo;
+		return this.tipo;
 	}
 	
 	public double getValor() {
 		
-		return valor;
+		return this.valor;
 	}
 	
 	//Setters
 	
 	public void setTipo(String t) {
 		
-		tipo = t;
+		this.tipo = t;
 	}
 	
 	public void setValor(double v) {
 		
-		valor = v;
+		this.valor = v;
 	}
 }

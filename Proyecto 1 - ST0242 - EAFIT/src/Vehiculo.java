@@ -11,8 +11,8 @@ public class Vehiculo {
 	
 	public Vehiculo() {
 		
-		vehiculos[posAnadir] = this;
-		posAnadir++;
+		Vehiculo.vehiculos[posAnadir] = this;
+		Vehiculo.posAnadir++;
 	}
 	
 	public Vehiculo(int mo, String ma, double va) {
@@ -25,27 +25,27 @@ public class Vehiculo {
 	
 	public Vehiculo(int mo, String ma, double va, String co) {
 		
-		modelo = mo;
-		marca = ma;
-		valorComercial = va;
-		color = co;
+		this.modelo = mo;
+		this.marca = ma;
+		this.valorComercial = va;
+		this.color = co;
 		
-		vehiculos[posAnadir] = this;
-		posAnadir++;
+		Vehiculo.vehiculos[posAnadir] = this;
+		Vehiculo.posAnadir++;
 	}
 	
 	public String toString() {
 		
-		return String.valueOf(modelo).concat(" " + marca).concat(String.valueOf(" " + valorComercial)).concat(" " + color);
+		return String.valueOf(this.modelo).concat(" " + this.marca).concat(String.valueOf(" " + this.valorComercial)).concat(" " + this.color);
 	}
 	
 	public static String toStringVehiculos() {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < cantidadVehiculos(); i++) {
+		for(int i = 0; i < Vehiculo.cantidadVehiculos(); i++) {
 			
-			resultado = resultado.concat("Vehículo en posición #" + i + ": " + vehiculos[i].toString() + "\n");
+			resultado = resultado.concat("Vehículo en posición #" + i + ": " + Vehiculo.vehiculos[i].toString() + "\n");
 		}
 		
 		return resultado;
@@ -55,11 +55,11 @@ public class Vehiculo {
 		
 		String resultado = "";
 		
-		for(int i = 0; i < cantidadVehiculos(); i++) {
+		for(int i = 0; i < Vehiculo.cantidadVehiculos(); i++) {
 			
 			if(vehiculos[i].getColor().equalsIgnoreCase("verde")) {
 				
-				resultado = resultado.concat("Vehículo en posición #" + i + ": " + vehiculos[i].toString() + "\n");
+				resultado = resultado.concat("Vehículo en posición #" + i + ": " + Vehiculo.vehiculos[i].toString() + "\n");
 			}
 		}
 		
@@ -69,50 +69,50 @@ public class Vehiculo {
 	
 	public static int cantidadVehiculos() {
 		
-		return posAnadir;
+		return Vehiculo.posAnadir;
 	}
 	
 	//Getters
 	
 	public int getModelo() {
 		
-		return modelo;
+		return this.modelo;
 	}
 	
 	public String getMarca() {
 		
-		return marca;
+		return this.marca;
 	}
 	
 	public double getValorComercial() {
 		
-		return valorComercial;
+		return this.valorComercial;
 	}
 	
 	public String getColor() {
 		
-		return color;
+		return this.color;
 	}
 	
 	//Setters
 	
 	public void setModelo(int nuevoModelo) {
 		
-		modelo = nuevoModelo;
+		this.modelo = nuevoModelo;
 	}
 	
 	public void setMarca(String nuevaMarca) {
 		
-		marca = nuevaMarca;
+		this.marca = nuevaMarca;
 	}
 	
 	public void setValorComercial(double nuevoValor) {
 		
-		valorComercial = nuevoValor;
+		this.valorComercial = nuevoValor;
 	}
 	
 	public void setColor(String nuevoColor) {
 		
-		color = nuevoColor;
+		this.color = nuevoColor;
 	}
 }

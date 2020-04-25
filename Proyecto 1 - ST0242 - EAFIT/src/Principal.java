@@ -101,7 +101,7 @@ public class Principal {
 					continue;
 				}
 				
-				System.out.println(Sensor.toStringSensores());
+				System.out.println(Sensor.toStringSensores(null));
 				continue;
 			}
 			
